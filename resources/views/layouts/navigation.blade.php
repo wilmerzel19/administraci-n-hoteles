@@ -1,3 +1,35 @@
+@php
+    $navigation = [
+        [
+            'name' => 'Panel de control',
+            'route' => 'dashboard',
+        ],
+        [
+            'name' => 'Hoteles',
+            'route' => 'hoteles',
+        ],
+        /*[
+            'name' => 'Habitaciones',
+            'route' => 'habitaciones',
+        ],
+        [
+            'name' => 'Servicios',
+            'route' => 'servicios',
+        ],
+        [
+            'name' => 'Clientes',
+            'route' => 'clientes',
+        ],
+        [
+            'name' => 'Asistencia',
+            'route' => 'asistencia',
+        ],
+        [
+            'name' => 'Usuarios',
+            'route' => 'usuarios',
+        ],*/
+    ];
+@endphp
 <nav x-data="{ open: false }" class="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -12,9 +44,13 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
-                    </x-nav-link>
+
+                    @foreach ($navigation as $item)
+                        <x-nav-link :href="route($item['route'])" :active="request()->routeIs($item['route'])">
+                            {{ $item['name'] }}
+                        </x-nav-link>
+                    @endforeach
+
                 </div>
             </div>
 
@@ -67,9 +103,11 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
-            </x-responsive-nav-link>
+            @foreach($navigation as $item)
+                <x-responsive-nav-link :href="route($item['route'])" :active="request()->routeIs($item['route'])">
+                    {{ $item['name'] }}
+                </x-responsive-nav-link>
+            @endforeach
         </div>
 
         <!-- Responsive Settings Options -->
