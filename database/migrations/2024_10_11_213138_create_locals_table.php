@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('locales', function (Blueprint $table) {
             $table->id();
             $table->string('nombre')->index();
-            $table->string('imagen')->nullable();
+            $table->string('imagen')-> nullable();
             $table->string('direccion')->index()->nullable();
             $table->text('descripcion')->index()->nullable();
             $table->string('telefono')->nullable();

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Livewire\HabitacionesComponent;
 use App\Livewire\HotelesComponent;
 use Illuminate\Support\Facades\Route;
 
@@ -23,6 +24,12 @@ Route::middleware('auth')->group(function () {
 Route::middleware('auth')->group(function(){
     Route::get('/hoteles', HotelesComponent::class)->name('hoteles');
 });
+
+Route::middleware('auth')->group(function(){
+    Route::get('/habitaciones', HabitacionesComponent::class)->name('habitaciones');
+});
+
+
 
 
 require __DIR__.'/auth.php';

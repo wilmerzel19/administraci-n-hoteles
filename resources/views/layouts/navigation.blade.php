@@ -8,11 +8,13 @@
             'name' => 'Hoteles',
             'route' => 'hoteles',
         ],
-        /*[
+
+        [
+
             'name' => 'Habitaciones',
             'route' => 'habitaciones',
         ],
-        [
+      /*  [
             'name' => 'Servicios',
             'route' => 'servicios',
         ],
