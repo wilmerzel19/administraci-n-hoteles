@@ -24,6 +24,8 @@ El sistema de gestión de hoteles y reservas es una aplicación web que permite 
 - Alquiler
 - Movimiento
 
+  !.[].(https://github.com/wilmerzel19/administraci-n-hoteles/blob/main/Captura%20de%20pantalla_20241108_103606.png)
+
 
 
 
