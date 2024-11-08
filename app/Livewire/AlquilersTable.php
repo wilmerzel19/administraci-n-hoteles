@@ -4,33 +4,33 @@ namespace App\Livewire;
 
 use Rappasoft\LaravelLivewireTables\DataTableComponent;
 use Rappasoft\LaravelLivewireTables\Views\Column;
-use App\Models\Habitacion;
+use App\Models\Alquiler;
 
-class HabitacionesTable extends DataTableComponent
+class AlquilersTable extends DataTableComponent
 {
-    protected $model = Habitacion::class;
+    protected $model = Alquiler::class;
 
     public function configure(): void
     {
         $this->setPrimaryKey('id');
-
-    
     }
 
     public function columns(): array
     {
         return [
-
-            Column::make("Id", "id",)
-
+            Column::make("Id", "id")
                 ->sortable(),
-
-
-            Column::make("Imagen", "imagen")
+            Column::make("Usuario", "usuario")
                 ->sortable(),
-            Column::make("Numero", "numero")
+            Column::make("Habitacion id", "habitacion_id")
                 ->sortable(),
-            Column::make("Descripcion", "descripcion")
+            Column::make("Fecha inicio", "fecha_inicio")
+                ->sortable(),
+            Column::make("Fecha fin", "fecha_fin")
+                ->sortable(),
+            Column::make("Precio", "precio")
+                ->sortable(),
+            Column::make("Estado", "estado")
                 ->sortable(),
             Column::make("Created at", "created_at")
                 ->sortable(),
