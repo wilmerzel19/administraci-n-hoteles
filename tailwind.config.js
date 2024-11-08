@@ -11,6 +11,9 @@ export default {
         './vendor/rappasoft/laravel-livewire-tables/resources/views/**/*.blade.php',
         './app/Livewire/*.php',
         './app/Livewire/**/*.php',
+        "./resources/**/*.blade.php",
+         "./resources/**/*.js",
+         "./resources/**/*.vue",
     ],
 
     theme: {

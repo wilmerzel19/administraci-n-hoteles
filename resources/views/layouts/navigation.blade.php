@@ -3,20 +3,49 @@
         [
             'name' => 'Panel de control',
             'route' => 'dashboard',
+            'icon' => 'fas fa-tachometer-alt',
+
         ],
         [
             'name' => 'Hoteles',
             'route' => 'hoteles',
         ],
-        /*[
+
+        [
+
             'name' => 'Habitaciones',
             'route' => 'habitaciones',
+
+
         ],
-        [
+      [
             'name' => 'Servicios',
             'route' => 'servicios',
         ],
+
         [
+            'name' => 'Alquileres',
+            'route' => 'alquileres',
+        ],
+        [
+            'name'=> 'Pagos',
+            'route' => 'pagos',
+],
+
+    [
+        'name' => 'Reservas',
+        'route' => 'reservas',
+],
+    [
+        'name' => 'Movimientos',
+        'route' => 'movimientos',
+],
+
+
+
+
+
+       /*
             'name' => 'Clientes',
             'route' => 'clientes',
         ],
@@ -47,6 +76,7 @@
 
                     @foreach ($navigation as $item)
                         <x-nav-link :href="route($item['route'])" :active="request()->routeIs($item['route'])">
+
                             {{ $item['name'] }}
                         </x-nav-link>
                     @endforeach
