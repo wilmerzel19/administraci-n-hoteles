@@ -10,4 +10,8 @@ class HotelesComponent extends Component
     {
         return view('livewire.hoteles-component');
     }
-}
+
+    }
+
+
+

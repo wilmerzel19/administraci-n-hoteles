@@ -36,10 +36,7 @@ class LocalesTable extends DataTableComponent
                 ->sortable(),
             Column::make("Tipo", "tipo")
                 ->sortable(),
-            Column::make("Created at", "created_at")
-                ->sortable(),
-            Column::make("Updated at", "updated_at")
-                ->sortable(),
+          
         ];
     }
 }

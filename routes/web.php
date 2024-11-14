@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Livewire\AgregarHotelesComponent;
 use App\Livewire\HabitacionesComponent;
 use App\Livewire\HotelesComponent;
 use App\Livewire\ServiciosComponent;
@@ -51,6 +52,12 @@ Route::middleware('auth')->group(function(){
 Route::middleware('auth')->group(function(){
     Route::get('/movimientos', MovimientosComponent::class)->name('movimientos');
 });
+
+
+Route::middleware('auth')->group(function(){
+    Route::get('/hoteles/agregar', AgregarHotelesComponent::class)->name('locales.agregar');
+});
+
 
 
 
