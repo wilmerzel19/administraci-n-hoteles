@@ -56,6 +56,7 @@ Route::middleware('auth')->group(function(){
 
 Route::middleware('auth')->group(function(){
     Route::get('/hoteles/agregar', AgregarHotelesComponent::class)->name('locales.agregar');
+    Route::post('/hoteles/agregar', AgregarHotelesComponent::class)->name('locales.agregar');
 });
 
 
